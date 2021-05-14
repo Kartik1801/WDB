@@ -1,0 +1,21 @@
+body{
+    background-color: #f1faee;
+}
+h1{
+color: #e63946;
+}
+h3{
+    color: #bb3e03;
+}
+div {
+    width: 100px;
+    height: 100px;
+    border: #3d5a80 solid 2px;
+    background-color: #ee6c4d;
+    display:inline-block;
+}
+#A div{
+    position:static;
+    top:20px;
+    left:20px;
+}
