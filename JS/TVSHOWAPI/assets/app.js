@@ -1,9 +1,14 @@
 const form= document.querySelector("#searchform");
+
 form.addEventListener('submit',async function (e){
-e.preventDefault();
-const searchinput=form.elements.showsearch.value;
-const  res= await axios.get(`http://api.tvmaze.com/search/shows?q=${searchinput}`)
-getImg(res.data);
+    e.preventDefault();
+    const input=form.elements.showsearch;
+    const searchinput=input.value;
+    //const  res= await axios.get(`http://api.tvmaze.com/search/shows?q=${searchinput}`)
+    const param={ params: { q: searchinput } }
+    const  res= await axios.get(`http://api.tvmaze.com/search/shows`,param);
+    getImg(res.data);
+    input.value="";
 })
 
 const getImg= (shows) =>{
