@@ -20,3 +20,10 @@ const getImg= (shows) =>{
     }
 }
 }
+
+//TO DO 
+/* 
+Dynamically delete Images
+Show Cards with full details of Shows 
+Dynamic Search ... 
+*/
