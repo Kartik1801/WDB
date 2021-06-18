@@ -43,6 +43,10 @@ table {
 	border-spacing: 0;
 }
 /*MAIN STYLES*/
+body{
+    font-family:'Oswald', serif;
+    font-weight: 500;
+}
 nav{
     display: flex;
     background-color: darkslategrey;
@@ -51,9 +55,10 @@ nav{
     overflow:hidden;
     flex-direction: row;
     flex-wrap: nowrap;
-    
+    justify-content: space-around;
     align-items: center;
     align-content: space-around;    
 }
 .nav-head{
+
 }
