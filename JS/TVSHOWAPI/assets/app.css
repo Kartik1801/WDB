@@ -48,7 +48,7 @@ table {
 /*MAIN STYLES*/
 body{
     font-family:'Oswald', serif;
-    font-weight: 500x;
+    font-weight: 500;
     font-size: 15px;
 }
 #wrap{
@@ -58,22 +58,20 @@ body{
     padding: 1.5rem 3rem;
     overflow:hidden;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-content: space-around;    
 }
 input[type="text"] {
-    height: 4rem;
-    font-size: 2rem;
-    display: inline-block;
+    height: 3rem;
+    font-size: 1rem;
     font-family: "Lato";
     font-weight: 300;
     border: none;
     outline: none;
     color:azure;
-    padding: 3px;
-    padding-right: 60px;
+    padding: 0.2rem;
+    padding-right: 1.5rem;
     width: 0px;
     position: absolute;
     top: 0;
@@ -96,10 +94,8 @@ input[type="text"] {
   button {
     height: 4rem;
     width: 3rem;
-    display: inline-block;
-    color:red;
-    background: url(search-3-32.ico) center center no-repeat;
-    text-indent: -10000px;
+    background: url(search-3-64.ico) center center no-repeat;
+    background-size: 1.5rem;
     border: none;
     position: absolute;
     top: 0;
