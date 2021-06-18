@@ -64,14 +64,14 @@ body{
     align-content: space-around;    
 }
 input[type="text"] {
-    height: 60px;
-    font-size: 3.2rem;
+    height: 4rem;
+    font-size: 2rem;
     display: inline-block;
     font-family: "Lato";
-    font-weight: 100;
+    font-weight: 300;
     border: none;
     outline: none;
-    color: #555;
+    color:azure;
     padding: 3px;
     padding-right: 60px;
     width: 0px;
@@ -83,4 +83,35 @@ input[type="text"] {
     transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
     cursor: pointer;
   }
+  input[type="text"]:focus:hover {
+    border-bottom: 1px solid azure;
+  }
   
+  input[type="text"]:focus {
+    width: 45rem;
+    z-index: 1;
+    border-bottom: 1px solid azure;
+    cursor: text;
+  }
+  button {
+    height: 4rem;
+    width: 3rem;
+    display: inline-block;
+    color:red;
+    background: url(search-3-32.ico) center center no-repeat;
+    text-indent: -10000px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity .4s ease;
+  }
+  
+  
+button:hover {
+    opacity: 0.8;
+  }
