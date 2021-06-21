@@ -1,8 +1,8 @@
+/*CSS to be fixed*/
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
 
 /*CSS RESET*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,66 +46,91 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
 /*MAIN STYLES*/
-
 body{
     font-family:'Oswald', serif;
     font-weight: 500;
     font-size: 15px;
 }
+
 #wrap{
   display: flex;
-  flex-direction: row;
-  background-color:teal ;
-  color: azure;
+  background-color:slategray;
+  color: azure; 
   padding: 1rem 1.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-around;
-  overflow: hidden;
-}
-.navhead{
-  font-size: 1.5em;
-  margin: 0.5em;
-}
-#searchform{
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-}
+ }
+ .navhead{
+   margin: auto;
+   font-size: 1.5em;  
+ }
+ #searchform {
+   margin: auto;
+ }
+ 
+ #searchform input[type="text"]{
+ outline: none;
+ border: none;
+ padding:1em;
+ font-size: 1em;
+ font-weight: 300;
+ font-family: 'Lato';
+ background:none;
+ color:azure;
+ }
+ #searchform input[type="text"]:focus{
+ border-bottom: 1px solid azure;
+ }
+ }
+ #searchform input[type="text"]:placeholder{
+ color: azure;
+ opacity: 1;
+ }
+ 
 
-#searchform input[type="text"]{
-font-family:"Lato";
-font-size: 1em;
-font-weight: 300;
-border: none;
-outline: none;
-margin:auto; 
-width: 1em; 
-position: absolute;
-top: 1em;
-right: 1.5em;
-z-index: 3;
-transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-cursor: pointer;
-padding: 0.2em;
-padding-right: 1.5em;
-background:none;
-color:azure;
-height: 3em;
+/* #wrap{
+    display: flex;
+    background-color: darkslategrey;
+    color: azure;
+    padding: 1.5rem 3rem;
+    overflow:hidden;
+    flex-direction: row;
+    
 }
-input[type="text"]:focus:hover {
-    border-bottom: 1em solid azure;
-}
+input[type="text"] {
+    height: 3em;
+    display: inline-;
+    margin: auto;
+    font-size: 1em;
+    font-family: "Lato";
+    font-weight: 300;
+    border: none;
+    outline: none;
+    color:azure;
+    padding: 0.2em;
+    padding-right: 1.5em;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 3;
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+  }
+  input[type="text"]:focus:hover {
+    border-bottom: 1px solid azure;
+  }
   
-input[type="text"]:focus {
+  input[type="text"]:focus {
     width: 45em;
     z-index: 1;
     border-bottom: 1px solid azure;
     cursor: text;
-}
-  /*
+  }
   button {
     height: 4em;
     width: 3em;
@@ -129,4 +154,4 @@ input[type="text"]:focus {
   
 button:hover {
     opacity: 1  ;
-  } */ */
+  } */
