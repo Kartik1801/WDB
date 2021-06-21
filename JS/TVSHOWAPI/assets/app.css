@@ -7,21 +7,23 @@ body{
     font-family:'Oswald', serif;
     font-weight: 500;
     font-size: 15px;
+    margin: 0;
 }
-
 #wrap{
   display: flex;
   background-color:#556;
   color: azure; 
-  padding: 1.5rem 3rem;
+  padding: 1rem 1.5rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  box-shadow: 0.2em 0.25em 0.5em 0.1em #afafaf;
+
  }
  .navhead{
    margin: auto;
-   font-size: 1.5em;  
+   font-size: 1.75em;  
  }
  #searchform {
    margin: auto;
@@ -31,9 +33,10 @@ body{
  outline: none;
  border: none;
  padding:0.2em;
- padding: 1em;
- font-size: 0.85em;
- font-weight: 300;
+ padding-left: 0;
+ padding-right: 1em;
+ font-size: 1em;
+ font-weight: 100;
  font-family: 'Lato';
  background:none;
  width:0px;
@@ -44,7 +47,7 @@ body{
  }
  #searchform input[type="text"]:focus{
   cursor: text;
-  width: 25em;
+  width: 15em;
   z-index: 1;
   border-bottom: 1px solid azure;
  }
