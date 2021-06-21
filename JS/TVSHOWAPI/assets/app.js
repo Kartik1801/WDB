@@ -2,7 +2,7 @@ const form= document.querySelector("#searchform");
 
 form.addEventListener('submit',async function (e){
     e.preventDefault();
-    const input=form.elements.showsearch;
+    const input=form.elements.query;
     const searchinput=input.value;
     //const  res= await axios.get(`http://api.tvmaze.com/search/shows?q=${searchinput}`)
     const param={ params: { q: searchinput } }
