@@ -48,7 +48,7 @@ body{
   z-index: 1;
   border-bottom: 1px solid azure;
  }
- }
+ 
  #searchform input[type="text"]:focus:hover{
  border-bottom: 1px solid azure;
  }
