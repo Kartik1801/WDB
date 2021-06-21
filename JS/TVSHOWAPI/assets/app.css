@@ -13,7 +13,7 @@ body{
   display: flex;
   background-color:#556;
   color: azure; 
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 3rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -31,19 +31,31 @@ body{
  outline: none;
  border: none;
  padding:0.2em;
- font-size: 1em;
+ padding: 1em;
+ font-size: 0.85em;
  font-weight: 300;
  font-family: 'Lato';
  background:none;
+ width:0px;
  color:azure;
+ z-index: 3;
+ transition: width 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+ cursor: pointer;
  }
  #searchform input[type="text"]:focus{
+  cursor: text;
+  width: 25em;
+  z-index: 1;
+  border-bottom: 1px solid azure;
+ }
+ }
+ #searchform input[type="text"]:focus:hover{
  border-bottom: 1px solid azure;
  }
  
  #searchform input[type="text"]::placeholder{
  color: azure;
- opacity: 1;  
+ opacity: 0.5;  
  }
  
 
