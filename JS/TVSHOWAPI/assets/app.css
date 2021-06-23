@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100;1,200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Raleway:ital,wght@0,100;0,200;1,100;1,200&display=swap');
 body{
     font-family:'Oswald', serif;
     font-weight: 500;
@@ -118,4 +118,15 @@ button{
   font-family: 'Raleway',sans-serif;
   font-weight: 200;
   font-style: italic;
+}
+.res{ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.res h3{
+  font-family: 'Lato',sans-serif;
+  font-weight:300;
+  font-size: 1.5em;
 }
