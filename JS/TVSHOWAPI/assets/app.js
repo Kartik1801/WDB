@@ -9,7 +9,7 @@ form.addEventListener('submit',async function (e){
     const  res= await axios.get(`http://api.tvmaze.com/search/shows`,param);
     const sr=document.createElement("h2");
     const main=document.querySelector(".main");
-    
+    sr.innerText=`Search Result for "${searchinput}"`;
     main.appendChild(sr);
     input.value="";
 })
