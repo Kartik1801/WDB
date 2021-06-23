@@ -7,17 +7,21 @@ form.addEventListener('submit',async function (e){
     //const  res= await axios.get(`http://api.tvmaze.com/search/shows?q=${searchinput}`)
     const param={ params: { q: searchinput } }
     const  res= await axios.get(`http://api.tvmaze.com/search/shows`,param);
-    showResult(res.data);
+    showResult(searchinput,res.data);
     input.value="";
 
 })
-const showResult= (searchresult)=>{
-    const sr=document.createElement("h2");
-    const main=document.querySelector(".main");
+const showResult= (searchinput,searchresult)=>{
+    const sr=document.querySelector("h2");
+    if(searchresult===[]){
+        sr.innerText=`No Such Show Found <O_O>...`
+    }
+    else
+    {
+        const main=document.querySelector(".main");
     sr.innerText=`Search Result for "${searchinput}"`;
-    main.appendChild(sr);
-    //getImg(res.data)
-   
+    getImg(res.data)
+    }
 }
 const getImg= (shows) =>{
     for(let result of shows){
