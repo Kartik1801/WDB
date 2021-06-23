@@ -21,6 +21,7 @@ form.addEventListener('submit',async function (e){
     //Function Call to display result obtained
         if(res.data)
            { 
+            SearchResult.innerText=`Search Result for '${searchInput}'`   
                showResult(res.data);
            }
         else    
@@ -38,6 +39,7 @@ const showResult= (searchresult)=>{
         const img=document.createElement("img");
         img.src=shows.show.image.medium;
         const name=document.createElement("h3");
+        console.log(shows.show.name);
         name.innerText=`${shows.show.name}`;
         r.appendChild(img);
         r.appendChild(name);
