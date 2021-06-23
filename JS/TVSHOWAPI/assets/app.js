@@ -2,12 +2,12 @@ const form= document.querySelector("#searchform");
 
 form.addEventListener('submit',async function (e){
     e.preventDefault();
-    const SearchResult=document.querySelector("h2");
+    const searchResult=document.querySelector("h2");
     const r=document.querySelectorAll(".res");
 //remove all the result cards if any 
     r.forEach((elem)=>elem.remove());
 //remove any result Text If any
-    SearchResult.innerText="";
+    searchResult.innerText="";
 //get Search Query
     const input=form.elements.query
     const searchInput=input.value;
@@ -21,17 +21,20 @@ form.addEventListener('submit',async function (e){
     //Function Call to display result obtained
         if(res.data)
            { 
-            SearchResult.innerText=`Search Result for '${searchInput}'`   
-               showResult(res.data);
+            searchResult.innerText=`Search Result for '${searchInput}'`   
+               showResult(searchInput,res.data);
            }
         else    
-            SearchResult.innerText=`No Such Show Found <O_O>...`    
+            searchResult.innerText=`No Such Show Found <O_O>...`    
     }   
     //Clears the Text input
     input.value="";
 })
-const showResult= (searchresult)=>{
+const showResult= (sr,searchresult)=>{
     const main=document.querySelector(".main");
+    const searchResult=document.querySelector("h2");
+    main.appendChild(searchResult)
+    searchresult
     for(let shows of searchresult){
         const r=document.createElement("div");
         r.setAttribute("class","res");
