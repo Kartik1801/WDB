@@ -7,7 +7,7 @@ form.addEventListener('submit',async function (e){
     //const  res= await axios.get(`http://api.tvmaze.com/search/shows?q=${searchinput}`)
     const param={ params: { q: searchinput } }
     const  res= await axios.get(`http://api.tvmaze.com/search/shows`,param);
-    getImg(res.data);
+    
     input.value="";
 })
 
