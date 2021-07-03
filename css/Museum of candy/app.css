@@ -40,7 +40,7 @@ body{
     color:#ea1c2c;
 }
 .scrolled{
-    background-color: rgb(222,192,222);
+    background-color: rgb(222,192,22);
     transition: background,500ms;
 }
 @media (max-width: 1240px) {
