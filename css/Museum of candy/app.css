@@ -1,5 +1,5 @@
 body{
-    background-color: #f5d9df;
+    background-color: #111D5E;
     font-family: "Nunito",sans-serif;
     font-weight: 400;
 }
@@ -30,7 +30,7 @@ body{
     font-weight: 100;
     line-height: 2.0;
     font-size: 1.125rem;
-    color:#f498b8;
+    color:#C70039;
 }
 .info_section h2{
     font-weight: 100;
