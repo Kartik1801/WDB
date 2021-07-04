@@ -1,8 +1,10 @@
+//Script For ScoreKeeper
 const player2=document.querySelector("#player2")
 const player1=document.querySelector("#player1")
 const player1Btn=document.querySelector("#player1Btn")
 const player2Btn=document.querySelector("#player2btn")
 const reset=document.querySelector("#resetbtn")
+
 player1Btn.addEventListener("click",()=> {
     const selector=document.querySelector("#selector");
     const bestof=parseInt(selector.value);
@@ -16,6 +18,7 @@ player1Btn.addEventListener("click",()=> {
         player2.setAttribute("class","lose")
     }
 })
+
 player2Btn.addEventListener("click",()=>{
     const selector=document.querySelector("#selector");
     const bestof=parseInt(selector.value);
@@ -30,6 +33,7 @@ player2Btn.addEventListener("click",()=>{
 
     }
 })
+
 reset.addEventListener("click",()=>{
     const selector=document.querySelector("#selector");
     const bestof=parseInt(selector.value);
