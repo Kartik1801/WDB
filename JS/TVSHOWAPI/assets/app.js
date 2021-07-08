@@ -1,3 +1,4 @@
+//TO BE REFACTORED
 const form= document.querySelector("#searchform");
 
 form.addEventListener('submit',async function (e){
@@ -50,3 +51,9 @@ const showResult= (sr,searchresult)=>{
     }    
 }
 
+/*
+FUNCTIONALITY TO BE ADDED :
+    - Show a landing page when nothing is shown
+    - Handle possible errors
+    - Restructure the code to make it DRY if possible 
+*/
