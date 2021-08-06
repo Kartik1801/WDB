@@ -1,6 +1,4 @@
-//TO BE REFACTORED
 const form= document.querySelector("#searchform");
-
 form.addEventListener('submit',async function (e){
     e.preventDefault();
     const searchResult=document.querySelector("h2");
@@ -10,9 +8,8 @@ form.addEventListener('submit',async function (e){
     //remove any result Text If any
     searchResult.innerText="";
     //get Search Query
-    const input=form.elements.query
+    const input=form.elements.query;
     const searchInput=input.value;
-
     if(searchInput)
     {
     //Get parameters to send to URL
@@ -27,6 +24,9 @@ form.addEventListener('submit',async function (e){
            }
         else    
             searchResult.innerText=`No Such Show Found <O_O>...`    
+    }
+    else{
+          searchResult.innerText=`No Such Show Found <O_O>...`;
     }   
     //Clears the Text input
     input.value="";
@@ -55,10 +55,3 @@ const showResult= (sr,searchresult)=>{
     }
     main.appendChild(c);    
 }
-
-/*
-FUNCTIONALITY TO BE ADDED :
-    - Show a landing page when nothing is shown
-    - Handle possible errors
-    - Restructure the code to make it DRY if possible 
-*/
