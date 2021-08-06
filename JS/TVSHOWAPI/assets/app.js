@@ -38,17 +38,20 @@ const showResult= (sr,searchresult)=>{
     const c=document.createElement("div");
     c.setAttribute("class","container");
     for(let shows of searchresult){
-        const r=document.createElement("div");
+        if(shows){
+            const r=document.createElement("div");
         r.setAttribute("class","res");
         console.log(shows);
         const img=document.createElement("img");
-        img.src=shows.show.image.medium;
+        if(shows.show.image!=null)
+            img.src=shows.show.image.medium;
         const name=document.createElement("h3");
         console.log(shows.show.name);
         name.innerText=`${shows.show.name}`;
         r.appendChild(img);
         r.appendChild(name);
-        c.appendChild(r);       
+        c.appendChild(r);
+        }
     }
     main.appendChild(c);    
 }
