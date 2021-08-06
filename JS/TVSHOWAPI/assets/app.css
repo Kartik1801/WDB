@@ -100,8 +100,8 @@ button{
   height:100%;
   margin:auto;  
   font-family:'Lato', sans-serif;
-   align-items: center;
-  flex-flow: coloumn wrap;
+  align-items: center;
+  flex-flow: wrap;
   justify-content: space-around;
   overflow: visible;
 }
@@ -109,15 +109,15 @@ button{
 .main .res{
   background-color:azure;
   box-shadow: 0.2em 0.25em 0.25em 0.1em #afafaf;
-  width: auto;
-  height: auto;
-  margin: 0.25em 0;
+  width: 30%;
+  height: 30%;
+  margin: 0.25em 0.25em;
   display: flex;
-  flex-direction:column;
-  flex-wrap:wrap;
-  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap:nowrap;
+  align-items: center;
   overflow: visible;
-  justify-content: stretch;
+  justify-content: space-between; 
 }
 .main div{
   width: 100%;
@@ -138,4 +138,7 @@ button{
   margin: auto;
   margin-top:0.5;
   font-size: 1.5em;
+}
+.res img{
+  margin: auto; 
 }

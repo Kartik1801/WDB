@@ -5,11 +5,11 @@ form.addEventListener('submit',async function (e){
     e.preventDefault();
     const searchResult=document.querySelector("h2");
     const r=document.querySelectorAll(".res");
-//remove all the result cards if any 
+    //remove all the result cards if any 
     r.forEach((elem)=>elem.remove());
-//remove any result Text If any
+    //remove any result Text If any
     searchResult.innerText="";
-//get Search Query
+    //get Search Query
     const input=form.elements.query
     const searchInput=input.value;
 
