@@ -34,8 +34,9 @@ form.addEventListener('submit',async function (e){
 const showResult= (sr,searchresult)=>{
     const main=document.querySelector(".main");
     const searchResult=document.querySelector("h2");
-    main.appendChild(searchResult)
-    searchresult
+    main.appendChild(searchResult);
+    const c=document.createElement("div");
+    c.setAttribute("class","container");
     for(let shows of searchresult){
         const r=document.createElement("div");
         r.setAttribute("class","res");
@@ -47,8 +48,9 @@ const showResult= (sr,searchresult)=>{
         name.innerText=`${shows.show.name}`;
         r.appendChild(img);
         r.appendChild(name);
-        main.appendChild(r);       
-    }    
+        c.appendChild(r);       
+    }
+    main.appendChild(c);    
 }
 
 /*
