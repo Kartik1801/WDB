@@ -12,6 +12,7 @@ form.addEventListener('submit',async function (e){
     const searchInput=input.value;
     if(searchInput)
     {
+    //Get parameters to send to URL
         const param={ params: { q: searchInput } }
     //Send Request to requested APIs
         const  res= await axios.get(`http://api.tvmaze.com/search/shows`,param);
