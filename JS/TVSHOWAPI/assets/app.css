@@ -26,6 +26,7 @@ body{
  .navhead{
    margin: auto;
    font-size: 1.75em;  
+   font-family: 'Palette Mosaic', cursive;
  }
 
  #searchform {
@@ -78,9 +79,9 @@ transition: opacity 4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
  #searchform input[type="text"]:focus:hover::placeholder{
     opacity: 0.75 ;
  }
-title{
-  font-family: 'Palette Mosaic', cursive;
-}
+
+
+
 button{
   display: inline;
   padding:0;
