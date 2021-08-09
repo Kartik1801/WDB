@@ -1,1 +1,0 @@
-const jk = require('get-me-a-joke')
