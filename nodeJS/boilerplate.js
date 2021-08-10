@@ -1,5 +1,6 @@
 // Script to create Directory based on passed arguments with html css and js files.
- const fs = require('fs');
+
+const fs = require('fs');
 const folderName= process.argv.slice(2)
 try{
 folderName.forEach(element => {
