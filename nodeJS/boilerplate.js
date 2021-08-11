@@ -2,16 +2,7 @@
 
 const fs = require('fs');
 const folderName= process.argv.slice(2)
-try{
+console.log(process .argv)
 folderName.forEach(element => {
     fs.mkdirSync(element);
-    fs.writeFileSync(`${element}/index.html`)
-    fs.mkdirSync(`${element}/Assets`);
-    fs.writeFileSync(`${element}/Assets/app.css`) 
-    fs.writeFileSync(`${element}/Assets/app.js`) 
 });
-}
-catch(e){
-    console.log("Something is wrong!");
-    console.log(e);
-}
