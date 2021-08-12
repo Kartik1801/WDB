@@ -1,8 +1,8 @@
 // Language Guess
-const argv=process.argv.slice(2);
+const args=process.argv[2];
 const franc=require('franc');
 const lang = require('langs')   
-element=argv[0]
+element=args
 const code=franc(element);
 
 if(code!='und')
