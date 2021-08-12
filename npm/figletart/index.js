@@ -1,4 +1,5 @@
 const figlet=require('figlet')
+const color=require('colors')
 figlet('Hello!',(e,data)=>{
     if(e){
         console.log('Something went wrong');
