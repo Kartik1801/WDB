@@ -1,4 +1,4 @@
-// Getting Startede with Express
+// Getting Started with Express
 const exp = require('express');
 const app=exp();
 
