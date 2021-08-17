@@ -2,16 +2,15 @@
 const exp = require('express');
 const app=exp();
 const port=process.argv[2]
-
+if(port)
+{
+    //Every time a request is made use function is executed    
     app.use(()=>{
-        console.log('Something happened')
+        console.log('We got your request');
     })
-    
-    app.get("*",(req,res)=>{
-        return("Aye Aye, Seniore! ")
-    })
-    
     app.listen(port,()=>{
-    console.log(`Listening on port ${port}`)
+        console.log(`Listening on port ${port}`);
     })
-
+}
+else
+    console.log('Enter a port no!');
