@@ -16,21 +16,26 @@ if(port)
     app.get("/r/:subreddit",(req,res) =>{
         const {subreddit}=req.params;
         console.log(`Browsing ${subreddit} Subreddit`);
-        res.send(`<h1>Browsing ${subreddit} Subreddit</h1>`)
+        res.send(`<h1>Browsing ${subreddit} Subreddit</h1>`);
     })
 
     app.get("/r/:subreddit/:postID",(req,res) =>{
         const {subreddit,postID}=req.params;
         console.log(req.params)
         console.log(`Viewing ${postID} of ${subreddit} Subreddit`);
-        res.send(`<h1>Viewing ${postID} of ${subreddit} Subreddit</h1>`)
+        res.send(`<h1>Viewing ${postID} of ${subreddit} Subreddit</h1>`);
+    })
+
+    app.get("/",(req,res) =>{
+        console.log("Requested for /");
+        res.send("<h1>WELCOME TO THE HOME PAGE</h1>");
     })
 
     app.get("/cat",(req,res) =>{
         console.log("Requested for /cat");
-        res.send("<h1>MEOW !!!!</h1>")
+        res.send("<h1>MEOW !!!!</h1>");
     })
-
+    
     app.get("/dog",(req,res) =>{
         console.log("Requested for /dog");
         res.send("<h1>WOOF !!!!</h1>")
