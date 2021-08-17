@@ -41,6 +41,14 @@ if(port)
         res.send("<h1>WOOF !!!!</h1>")
     })
 
+    app.get("/search",(req,res) =>{
+        const {query} = req.query;
+        if(!query){
+            res.send("<h1>NOTHING FOUND IF NOTHING IS SEARCHED !</h1>");
+        }
+        res.send(`<h1>Search result for: ${query}</h1>`);
+    })
+
     app.get("*",(req,res) =>{
         console.log("Unknown request")
         res.send("<h1>わからない</h1>")
