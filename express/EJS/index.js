@@ -1,14 +1,17 @@
 const express =require('express');
 const app =express();
 const port = process.argv[2];
-
+const path = require('path');
 // ejs is automatically required by express behind the scenes.
 // By default, When we us a view engine, express is going to assume 
 // that all our views/templates exist in a directory /views
 //                         or 
 // We can select a directory using views property of app.set()
+// NOTE : If we run this file in some different directory then it will generate an error when
+//        as by default when we use an view engine, express just append process.cwd() with views
+//        Instead we can use path module to set the directory of views folder ourself 
 app.set('view engine', 'ejs');
-
+app.set('views', path.join(__dirname, '/views'));
 app.get('/', (req, res) =>{
     res.render('home');
 })
