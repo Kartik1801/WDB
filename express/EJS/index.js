@@ -19,7 +19,7 @@ app.get('/', (req, res) =>{
 
 app.get("/random",(req,res)=>{
     random = Math.floor(Math.random()*6+1);
-    res.render('random',random);
+    res.render('random');
 })
 
 app.listen(port, () =>{
