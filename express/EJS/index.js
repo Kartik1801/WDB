@@ -12,8 +12,14 @@ const path = require('path');
 //        Instead we can use path module to set the directory of views folder ourself 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
+
 app.get('/', (req, res) =>{
     res.render('home');
+})
+
+app.get("/random",(req,res)=>{
+    random = Math.floor(Math.random()*6+1);
+    res.render('random',random);
 })
 
 app.listen(port, () =>{
