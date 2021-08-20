@@ -20,8 +20,13 @@ app.get('/', (req, res) =>{
 })
 
 app.get("/random",(req,res)=>{
+    num = Math.floor(Math.random()*6+1);
+    res.render('random',{diceroll: num});
+})
+
+app.get("/random/:something",(req,res)=>{
     random = Math.floor(Math.random()*6+1);
-    res.render('random');
+    res.render('')
 })
 
 app.listen(port, () =>{
