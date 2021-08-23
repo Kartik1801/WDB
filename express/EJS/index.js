@@ -19,14 +19,14 @@ app.get('/', (req, res) =>{
     res.render('home');
 })
 
+app.get("/eo",(req,res)=>{
+    const {num} = req.query
+    res.render('evenodd',{number: num});
+})
+
 app.get("/random",(req,res)=>{
     num = Math.floor(Math.random()*6+1);
     res.render('random',{diceroll: num});
-})
-
-app.get("/random/:something",(req,res)=>{
-    random = Math.floor(Math.random()*6+1);
-    res.render('')
 })
 
 app.listen(port, () =>{
