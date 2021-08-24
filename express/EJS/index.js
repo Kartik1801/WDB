@@ -19,6 +19,11 @@ app.get('/', (req, res) =>{
     res.render('home');
 })
 
+app.get('/r/:subreddit',(req,res)=>{
+    const {params}=req.params;
+    res.render('subreddit',{subreddit:params})
+})
+
 app.get("/eo",(req,res)=>{
     const {num} = req.query
     res.render('evenodd',{number: num});
