@@ -21,7 +21,7 @@ app.get('/', (req, res) =>{
 
 app.get('/r/:subreddit',(req,res)=>{
     const {params}=req.params;
-    res.render('subreddit',{subreddit:params})
+    res.render('subreddit',{subreddit:params.subreddit})
 })
 
 app.get("/eo",(req,res)=>{
