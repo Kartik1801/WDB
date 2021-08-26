@@ -35,6 +35,17 @@ app.get("/diceroll",(req,res)=>{
     res.render('random',{diceroll: num});
 })
 
+app.get("/cats",(req,res)=>{
+const cats=[
+    "Blue","Roxy",'Neko-chan',"Nyan Pasu"
+]
+res.render('cats',{ cats : cats})
+})
+
+app.get('*',(req,res)=>{
+    res.render("404")
+})
+
 app.listen(port, () =>{
     console.log(`listening on port ${port}`);
 })
