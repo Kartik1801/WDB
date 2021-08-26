@@ -1,6 +1,9 @@
 const express =require('express');
 const app =express();
-const port = process.argv[2];
+let port = process.argv[2];
+if(!port){
+    port=3000;
+}
 const path = require('path');
 /* 
  EJS is automatically required by express behind the scenes.
