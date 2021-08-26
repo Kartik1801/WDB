@@ -1,4 +1,5 @@
 {
+    "subreddits":{
     "soccer": {
         "name": "Soccer",
         "subscribers": 800000,
@@ -56,4 +57,5 @@
             }
         ]
     }
+}
 }
