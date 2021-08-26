@@ -30,7 +30,7 @@ app.get("/eo",(req,res)=>{
     res.render('evenodd',{number: num});
 })
 
-app.get("/random",(req,res)=>{
+app.get("/diceroll",(req,res)=>{
     num = Math.floor(Math.random()*6+1);
     res.render('random',{diceroll: num});
 })
