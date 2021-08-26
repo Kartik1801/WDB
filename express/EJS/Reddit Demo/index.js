@@ -17,6 +17,12 @@ app.get("/", (req, res)=>{
     res.render("HomePage",{subreddits: subreddits});
 })
 
+app.get("/r/:subreddit", (req, res)=>{
+    const{subreddit}= req.params;
+    const data =redditData.subreddits[subreddit];
+    res.render("subreddit",{...data});
+})
+
 app.get("*",(req,res) => {
     res.render('404')
 })
