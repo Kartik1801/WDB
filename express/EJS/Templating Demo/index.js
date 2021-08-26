@@ -9,7 +9,7 @@ const path = require('path');
  EJS is automatically required by express behind the scenes.
  
  By default, When we us a view engine, express is going to assume that all our views/templates
- exist in a directory /views (or) We can select a directory using views property of app.set()
+ exist in a directory "/views" (or) We can select a directory using views property of app.set()
 
  NOTE : If we run this file in some different directory then it will generate an error when
         as by default when we use an view engine, express just append process.cwd() with views
