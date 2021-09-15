@@ -1,0 +1,2 @@
+> Why react ?
+    react helps us in developing rich internet applications.
