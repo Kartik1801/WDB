@@ -1,2 +1,40 @@
+C: controller
+V: views
+M: models
+
 > Why react ?
-    react helps us in developing rich internet applications.
+    
+  -  To develop rich internet applications.
+    
+  -  Much better infastructure and processing capability is now available at client side.
+        
+        Earlier before 2010, Browser used behave only as Http client and to render html documents, but nowerdays they act like a online virtual OS.
+            
+            Nowerdays browser offers
+
+                                Data storage:
+                                            ~   local storage.
+                                            ~   Session storage.
+                                            ~   Indexed Database.
+
+                                Multithreading capability:
+                                            ~    Web Workers.
+
+                                Device Access:  
+                                            ~    Geolocation.
+
+                                Sockets: 
+                                            ~    Server Sent Events.
+                                            ~    Web Sockets.
+- We build an application that runs in the browser that:
+        
+        ~ handling user interaction.
+        ~ view generation.
+        ~ state mantained.
+
+Problem: 
+    In order to understand how react and other frameworks help us in building the above mentioned application
+    We will make a salary calculator
+
+  01_Salary Calculator:
+        Salary = basic + hra + da - tax%
