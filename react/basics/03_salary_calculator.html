@@ -76,13 +76,21 @@
         // User Interaction responsibility.
         $(function(){
             var model=new salaryCalculationModel();
-            
-            $('#btncalculate').click(function(){
+           // Here we populate the model as soon as the user enter the value instead of populating the model on button click. 
+            $("#txtbasic").on("change",function(){
                 model.basic=parseInt($("#txtbasic").val());
-                model.hra=parseInt($("#txthra").val());
-                model.da=parseInt($("#txtda").val());
-                model.tax=parseInt($("#rangetax").val());
-             
+            })
+            $("#txthra").on("change",function(){
+                    model.hra=parseInt($("#txthra").val());
+            })
+            $("#txtda").on("change",function(){
+                      model.da=parseInt($("#txtda").val());
+            })
+            $("#txttax").on("change",function(){
+                  model.tax=parseInt($("#rangetax").val());
+            })
+          
+            $('#btncalculate').click(function(){
                 model.calculateSalary();
 
                 $("#tdbasic").html(model.basic);
