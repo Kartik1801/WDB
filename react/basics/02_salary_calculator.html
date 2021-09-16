@@ -58,24 +58,39 @@
         </table>
     </div>
     <script>
+        //state & behavior of Calculator:
+        var salaryCalculationModel = function(){
+            this.basic=0;
+            this.hra=0;
+            this.da=0;
+            this.tax=0;
+            this.salary=0;
+        }
+
+        salaryCalculationModel.prototype.calculateSalary = function() {
+            var gross=this.basic+this.hra+this.da;
+            var net=gross*(1-(this.tax/100));
+            this.salary=net;
+        }
+
+        // User Interaction responsibility.
         $(function(){
+            var model=new salaryCalculationModel();
             //This function is executed when the document is loaded.
             $('#btncalculate').click(function(){
-                var basic=parseInt($("#txtbasic").val());
-                var hra=parseInt($("#txthra").val());
-                var da=parseInt($("#txtda").val());
-                var tax=parseInt($("#rangetax").val());
+                model.basic=parseInt($("#txtbasic").val());
+                model.hra=parseInt($("#txthra").val());
+                model.da=parseInt($("#txtda").val());
+                model.tax=parseInt($("#rangetax").val());
                 
-                var gross=basic+da+hra;
-                var net=gross*((100-tax)/100);
-                
-                $("#tdbasic").html(gross);
-                $("#tdhra").html(hra);
-                $("#tdda").html(da);
-                $("#tdtax").html(tax);
-                $("#tdsalary").html(net);
+                model.calculateSalary();
+
+                $("#tdbasic").html(model.basic);
+                $("#tdhra").html(model.hra);
+                $("#tdda").html(model.da);
+                $("#tdtax").html(model.tax);
+                $("#tdsalary").html(model.salary);
             })
-        })
-    </script>
+        })    </script>
 </body>
 </html>
