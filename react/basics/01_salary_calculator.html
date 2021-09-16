@@ -58,6 +58,17 @@
         </table>
     </div>
     <script>
+        //Calculation logic:
+        var salaryCalculationModel = function(){
+            this.basic=0;
+            this.hra=0;
+            this.da=0;
+            this.tax=0;
+            this.salary=(this.basic+this.hra+this.da)*(1-this.tax/100);
+        }
+
+
+        // UI view control.
         $(function(){
             //This function is executed when the document is loaded.
             $('#btncalculate').click(function(){
