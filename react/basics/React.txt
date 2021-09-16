@@ -38,6 +38,8 @@ Problem:
 
   01_Salary Calculator:
         Salary = basic + hra + da - tax%
+  02_Salary Calculator:
+        Is a better version of 01_Salary_calculator as it is mantainable.
 
 
 Mantainable Activities:
