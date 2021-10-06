@@ -35,7 +35,8 @@ const req= fetch('https://api.cryptonator.com/api/ticker/btc-usd')
 */
 
 //-----------------------------------------------------------------------------------------
-//Using async function with fetch API :
+
+// Using async function with fetch API:
 
 /* 
 const req = async() => {
@@ -46,7 +47,8 @@ const req = async() => {
     } catch (err) {
         console.log("Error : ", err);
     }
-} 
+}
+ 
 */
 
 //-----------------------------------------------------------------------------------------
