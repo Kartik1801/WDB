@@ -21,17 +21,17 @@ req.send()
 
 /*
 const req= fetch('https://api.cryptonator.com/api/ticker/btc-usd') 
-req.then(res =>{
-    //console.log("Response {Waiting to be parsed}=>",res);// resolves the promise as soon as 'header' is recieved!!! doesnt contain required data.
-   return res.json();//returns a promise
-})
-.then(parsed=>{
-   // console.log("Data parsed =>",parsed);
-    console.log("Current Value of BTC  => USD",parsed.ticker.price);
-})
-req.catch(err=>{
+ req.then(res =>{
+     //console.log("Response {Waiting to be parsed}=>",res);// resolves the promise as soon as 'header' is recieved!!! doesnt contain required data.
+     return res.json();//returns a promise
+    })
+    .then(parsed=>{
+     // console.log("Data parsed =>",parsed);
+        console.log("Current Value of BTC  => USD",parsed.ticker.price);
+    })
+ req.catch(err=>{
     console.log("Error : ", err);
-}) 
+    }) 
 */
 
 //-----------------------------------------------------------------------------------------
